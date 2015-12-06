@@ -1,13 +1,11 @@
-const pathHome = '/mmodbus';
-const {Router, Route} = ReactRouter; // eslint-disable-line
+//  Create Routes for Mmodbus tags
 
-const history = ReactRouter.history.useQueries(ReactRouter.history.createHistory)();
+let appSection = FlowRouter.group({
+  prefix: "/mmodbus"
+});
 
-Meteor.startup(function() {
-  React.render((
-    <Router history={history}>
-      <Route path={pathHome} component={MmApp}>
-      </Route>
-    </Router>
-  ), document.body);
+appSection.route('/', {
+  action: function() {
+    ReactLayout.render(MmApp, {content: 'Test'});
+  }
 });

@@ -14,12 +14,13 @@ Package.onUse(function(api) {
   api.versionsFrom('1.2.1');
   api.use('jeremybyu:mmodbus');
   api.use('ecmascript@0.1.5');
-  api.use('react');
+  api.use(['react-runtime', 'jsx', 'react-meteor-data']);
   api.use('templating@1.1.4');
-  api.use('reactrouter:react-router');
+  api.use(['kadira:flow-router@2.10.0', 'kadira:react-layout@1.5.2']);
+  // api.use('reactrouter:react-router');
   api.addFiles('mmodbus-reactview.js');
-  api.addFiles(['client/mmapp/mmapp.html', 'client/mmapp/mmapp.jsx']);
-  api.addFiles(['client/routes.jsx']);
+  api.addFiles(['client/mmapp/mmapp.html', 'client/mmapp/mmapp.jsx'], 'client');
+  api.addFiles(['client/routes.jsx'], 'client');
 });
 
 Package.onTest(function(api) {
