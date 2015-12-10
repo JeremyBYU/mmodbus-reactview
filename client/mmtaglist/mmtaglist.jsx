@@ -8,11 +8,12 @@ MmTagList = React.createClass({
   },
   render() {
     return (
-      <table className="pure-table pure-table-horizontal pure-table-striped">
+      <table className="pure-table pure-table-horizontal pure-table-striped tableSection">
         <thead>
           <tr>
             <th>Tag</th>
             <th>Description</th>
+            <th>Edit</th>
           </tr>
         </thead>
         <tbody>

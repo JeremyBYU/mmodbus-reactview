@@ -11,8 +11,7 @@ Package.describe({
 });
 
 Npm.depends({
-  'upper-case': '1.1.2',
-  'fixed-data-table': '0.6.0'  // module exports a function
+  'upper-case': '1.1.2'
 });
 
 
@@ -25,7 +24,7 @@ Package.onUse(function(api) {
   api.use(['cosmos:browserify@0.9.2'], 'client');
   api.use(['kadira:flow-router@2.10.0', 'kadira:react-layout@1.5.2']);
   // api.use('reactrouter:react-router');
-  api.addFiles(['package.browserify.js', 'package.browserify.options.json', 'client/css/pure.css', 'client/css/grids-responsive.css'], 'client');  // browserify options file)
+  api.addFiles(['package.browserify.js', 'package.browserify.options.json', 'client/css/pure.css', 'client/css/grids-responsive.css', 'client/css/custom.css'], 'client');  // browserify options file)
   api.addFiles('mmodbus-reactview.js');
   api.addFiles(['client/mmapp/mmapp.html', 'client/mmapp/mmapp.jsx', 'client/mmtaglist/mmtaglist.jsx', 'client/mmtag/mmtag.jsx'], 'client');
   api.addFiles(['client/routes.jsx'], 'client');

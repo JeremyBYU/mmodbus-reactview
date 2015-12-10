@@ -13,6 +13,9 @@ MmTag = React.createClass({
         <td>
           {this.props.tag.description}
         </td>
+        <td>
+          <button className="pure-button">Edit</button>
+        </td>
       </tr>
     );
   }
