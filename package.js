@@ -20,7 +20,7 @@ Package.onUse(function(api) {
   api.use('jeremybyu:mmodbus');
   api.use('ecmascript@0.1.5');
   api.use(['react-runtime', 'jsx', 'react-meteor-data']);
-  api.use('templating@1.1.4');
+  api.use(['templating@1.1.4', 'reactive-var'], 'client');
   api.use(['cosmos:browserify@0.9.2'], 'client');
   api.use(['kadira:flow-router@2.10.0', 'kadira:react-layout@1.5.2']);
   // api.use('reactrouter:react-router');

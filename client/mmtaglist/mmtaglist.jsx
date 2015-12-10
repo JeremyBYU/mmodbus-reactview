@@ -3,7 +3,7 @@ MmTagList = React.createClass({
   renderTags() {
     return this.props.tags.map((tag) => {
       //  return <Task key={task._id} task={task} />;
-      return <MmTag key={tag._id} tag={tag}/>;
+      return <MmTag key={tag._id} tag={tag} onClick={this.props.onClick}/>;
     });
   },
   render() {

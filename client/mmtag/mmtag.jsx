@@ -4,6 +4,9 @@ MmTag = React.createClass({
     // We can use propTypes to indicate it is required
     tag: React.PropTypes.object.isRequired
   },
+  handleClick: function() {
+    this.setState({liked: !this.state.liked});
+  },
   render() {
     return (
       <tr>
@@ -14,7 +17,7 @@ MmTag = React.createClass({
           {this.props.tag.description}
         </td>
         <td>
-          <button className="pure-button">Edit</button>
+          <button onClick={this.props.onClick} className="pure-button">Edit</button>
         </td>
       </tr>
     );
