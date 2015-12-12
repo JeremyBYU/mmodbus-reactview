@@ -1,3 +1,4 @@
+reactiveTag = new ReactiveVar(null);
 MmApp = React.createClass({
   mixins: [ReactMeteorData],
   getInitialState() {
@@ -6,9 +7,11 @@ MmApp = React.createClass({
     };
   },
   getMeteorData() {
+    console.log('Get Meteor Data Called');
+    console.log(`SelectedTag currenty: ${this.data.selectedTag}`);
     return {
       tags: MmodbusUtils.collections.Tags.find({}).fetch(),
-      selectedTag: new ReactiveVar(null)
+      selectedTag: reactiveTag
     };
   },
   updateSelectedTag(event) {
@@ -20,6 +23,7 @@ MmApp = React.createClass({
 
     if (match !== null) {
       console.log(match[1]);
+      //  this.setState({selectedTag: match[1]});
       this.data.selectedTag.set(match[1]);
     }
     //  this.data.selectedTag.set(id);

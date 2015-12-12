@@ -11,7 +11,8 @@ Package.describe({
 });
 
 Npm.depends({
-  'upper-case': '1.1.2'
+  'upper-case': '1.1.2',
+  'debug': '2.2.0'
 });
 
 
@@ -28,6 +29,7 @@ Package.onUse(function(api) {
   api.addFiles('mmodbus-reactview.js');
   api.addFiles(['client/mmapp/mmapp.html', 'client/mmapp/mmapp.jsx', 'client/mmtaglist/mmtaglist.jsx', 'client/mmtag/mmtag.jsx'], 'client');
   api.addFiles(['client/routes.jsx'], 'client');
+  api.export('_debug', 'client');
 });
 
 Package.onTest(function(api) {
